@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-    <img class="logo" src="../../../static/imgs/logo.png" alt="着迷说">
+    <image class="logo" src="../../../static/imgs/logo.png" mode="scaleToFill"/>
     <Search/>
+    <div>asdfasdf</div>
   </div>
 </template>
 
