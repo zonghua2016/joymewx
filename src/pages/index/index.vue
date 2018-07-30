@@ -3,19 +3,25 @@
     <image class="logo" src="../../../static/imgs/logo.png" mode="scaleToFill"/>
     <Search/>
     <History />
+    <Swiper />
+    <Letter />
   </div>
 </template>
 
 <script>
 import Search from "@/components/search.vue";
 import History from '@/components/history.vue';
+import Swiper from '@/components/swiper.vue';
+import Letter from '@/components/letter.vue';
 export default {
   data() {
     return {};
   },
   components: {
     Search,
-    History
+    History,
+    Swiper,
+    Letter
   }
 };
 </script>
@@ -23,7 +29,8 @@ export default {
 <style lang="scss" scoped>
 @import "../../common/styles/layout.scss";
 .container {
-  padding: 0 30rpx;
+  position: relative;
+  padding: 0;
   .logo {
     display: block;
     width: 280rpx;

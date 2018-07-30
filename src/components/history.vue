@@ -27,6 +27,7 @@ export default {
 .his_container {
   padding-right: 20rpx;
   padding-bottom: 12rpx;
+  margin: 0 30rpx;
   .title{
       font-size: 26rpx;
       color: #555;

@@ -55,6 +55,7 @@ export default {
   border: 1px solid #5e5e5e;
   border-radius: 10rpx;
   padding: 20rpx;
+  margin: 0 30rpx;
   background: #f7f7f7;
   .search_box {
     display: flex;
