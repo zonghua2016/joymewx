@@ -2,18 +2,20 @@
   <div class="container">
     <image class="logo" src="../../../static/imgs/logo.png" mode="scaleToFill"/>
     <Search/>
-    <div>asdfasdf</div>
+    <History />
   </div>
 </template>
 
 <script>
 import Search from "@/components/search.vue";
+import History from '@/components/history.vue';
 export default {
   data() {
     return {};
   },
   components: {
-    Search
+    Search,
+    History
   }
 };
 </script>

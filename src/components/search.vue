@@ -33,28 +33,6 @@ export default {
     // 搜索关键字
     srch_oper(kw) {
       let arr = [
-        "碧蓝航线",
-        "碧蓝航线wiki攻略",
-        "碧蓝航线装备出处",
-        "碧蓝海事局",
-        "碧蓝航线2",
-        "碧蓝航线wi碧蓝ki攻略34",
-        "碧蓝航线装备碧蓝出处56",
-        "海34事碧蓝局",
-        "碧蓝航线wiki攻略",
-        "碧蓝航线装备出处",
-        "碧蓝海事局",
-        "碧蓝航线2",
-        "碧蓝航线wi碧蓝ki攻略34",
-        "碧蓝航线装备碧蓝出处56",
-        "海34事碧蓝局",
-        "碧蓝航线wiki攻略",
-        "碧蓝航线装备出处",
-        "碧蓝海事局",
-        "碧蓝航线2",
-        "碧蓝航线wi碧蓝ki攻略34",
-        "碧蓝航线装备碧蓝出处56",
-        "海34事碧蓝局"
       ];
       this.srhList;
       for (let i = 0; i < arr.length; i++) {
@@ -126,6 +104,9 @@ export default {
       border-bottom: 1px solid #ddd;
       padding-left: 20rpx;
       color: #999;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       .kw {
         display: inline;
         margin: 0;
