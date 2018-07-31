@@ -5,7 +5,7 @@
             <span>最近查看记录</span>
         </div>
         <ul class="his_list">
-            <li v-for="(item, index) in hisList" :key="index" :ref="item" @click="_getHiskw(item)">{{item}}</li>
+            <li v-for="(item, index) in hisList" :key="index" @click="_getHiskw(item)">{{item}}</li>
         </ul>
     </div>
 </template>
@@ -17,8 +17,8 @@ export default {
         }
     },
     methods: {
-        _getHiskw(item){
-            console.log(item);
+        _getHiskw(kw){
+            this.$emit('getHiskw', kw)
         }
     }
 };

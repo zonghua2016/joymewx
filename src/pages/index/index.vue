@@ -1,10 +1,9 @@
 <template>
   <div class="container">
     <image class="logo" src="../../../static/imgs/logo.png" mode="scaleToFill"/>
-    <Search/>
-    <History />
+    <Search :keyword="keyword"/>
+    <History @getHiskw="getHiskw" />
     <Swiper />
-    <Letter />
   </div>
 </template>
 
@@ -12,16 +11,22 @@
 import Search from "@/components/search.vue";
 import History from '@/components/history.vue';
 import Swiper from '@/components/swiper.vue';
-import Letter from '@/components/letter.vue';
 export default {
   data() {
-    return {};
+    return {
+      keyword: ''
+    };
+  },
+  methods: {
+    getHiskw(kw) {
+      console.log(kw);
+      this.keyword = kw;
+    }
   },
   components: {
     Search,
     History,
-    Swiper,
-    Letter
+    Swiper
   }
 };
 </script>

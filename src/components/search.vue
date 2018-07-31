@@ -10,15 +10,21 @@
         <!-- 搜索栏结果 -->
         <ul class="srh_list" v-show="srhList">
           <li v-for="(item, index) in srhList" :key="index" @click="srch_oper" >{{item}}</li>
-          <!-- asdfafafds<span class="kw">是啊</span>是是是 -->
+          <!-- <span class="kw">关键字</span> -->
         </ul>
     </div>
 </template>
 <script>
+import {debounce} from '../common/js/util'
 export default {
+  props:{
+    keyword:{
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
-      keyword: "碧蓝",
       srhList: []
     };
   },
@@ -32,8 +38,7 @@ export default {
     },
     // 搜索关键字
     srch_oper(kw) {
-      let arr = [
-      ];
+      let arr = [];
       this.srhList;
       for (let i = 0; i < arr.length; i++) {
         const item = arr[i];
@@ -44,6 +49,12 @@ export default {
       //   return item.replace("碧蓝", "1111111");
       // });
       console.log(this.srhList);
+    }
+  },
+  watch: {
+    // 监控keyword
+    keyword(kw) {
+      console.log(kw);
     }
   }
 };
