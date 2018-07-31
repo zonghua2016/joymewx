@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <image class="logo" src="../../../static/imgs/logo.png" mode="scaleToFill"/>
+    <image class="logo" src="http://wikicdn.joyme.com/skins/MediaWikiBootstrap1/images/joyme-logo.png" mode="scaleToFill"/>
     <Search :keyword="keyword"/>
     <History @getHiskw="getHiskw" />
     <Swiper />

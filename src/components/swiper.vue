@@ -5,7 +5,7 @@
                 <span :class="curIndex==index?'sel':''" v-for="(item, index) in game" :key="index" @click="getGameInfo(index)" :ref="index"><i>{{item}}</i></span>
             </scroll-view>
         </div>
-        <!-- <div class="tit letTit" v-text="toView"></div> -->
+        <div class="tit letTit" v-text="toView"></div>
         <scroll-view class="game_groups"
                      scroll-y="true" 
                      scroll-with-animation="true" 
@@ -15,7 +15,10 @@
             <div class="game_group" ref="gameGroup" id="ABC">
               <div class="tit">ABC</div>
               <div class="game_items">
-                  <div class="game" v-for="(item,index) in games" :key="index">
+                  <div class="game"
+                       v-for="(item,index) in games" 
+                       :key="index"
+                       @click="openContent">
                       <image class="game_icon" lazy-load="true" :src="item.imgsrc" />
                       <h2 class="game_name">{{item.name}}</h2>
                   </div>
@@ -24,7 +27,10 @@
             <div class="game_group" ref="gameGroup" id="DEF">
               <div class="tit">DEF</div>
               <div class="game_items">
-                  <div class="game" v-for="(item,index) in gamedef" :key="index">
+                  <div class="game"
+                       v-for="(item,index) in gamedef" 
+                       :key="index"
+                       @click="openContent">
                       <image class="game_icon" lazy-load="true" :src="item.imgsrc" />
                       <h2 class="game_name">{{item.name}}</h2>
                   </div>
@@ -79,332 +85,334 @@ export default {
       ],
       games: [
         {
-          name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          name: "dsddddddddddddddddfsdfs",
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         }
       ],
       gamedef: [
         {
           name: "ddddddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "ddddddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dddddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dddddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "ddddddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dddd",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         },
         {
           name: "dsdfsdfs",
-          imgsrc: "http://p2.qhimgs4.com/t01b0a970f646f800d2.webp"
+          imgsrc: "http://p8.qhimg.com/dr/70__/t01116823880c30613d.png"
         }
       ],
       letters: ["ABC", "DEF", "GHI", "JKL", "MNO", "PQR", "STU", "VW", "XYZ"]
     };
   },
   mounted() {
-    this.calculateHeight()
+    this.calculateHeight();
   },
   methods: {
+    openContent() {
+      wx.navigateTo({
+        url: "/pages/content/main?src=http://wiki.joyme.com/zzwg/%E9%A6%96%E9%A1%B5"
+      });
+    },
     getGameInfo(index) {
       this.curIndex = index;
       this.showAll = index;
     },
     touchLetter(item, index) {
       this.toView = item;
-      console.log(item);
     },
     calculateHeight() {
-        var query = wx.createSelectorQuery();
-        this.listHeight = [];
-        const list = query.select('.game_group');
-        console.log(list.length);
-        
-        let height = 0;
-        this.listHeight.push(height);
-        for (let i = 0; i < list.length; i++) {
+      var query = wx.createSelectorQuery();
+      this.listHeight = [];
+      const list = query.select(".game_group");
+      let height = 0;
+      this.listHeight.push(height);
+      for (let i = 0; i < list.length; i++) {
         let item = list[i];
         height += item.clientHeight;
         this.listHeight.push(height);
-        }
+      }
     }
   }
 };
@@ -497,6 +505,10 @@ export default {
           margin-bottom: 20rpx;
         }
         .game_name {
+          width: 128rpx;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
           font-size: 26rpx;
           text-align: center;
         }
@@ -519,8 +531,8 @@ export default {
       text-align: center;
       padding: 0 10rpx;
       padding-right: 25rpx;
-      &.cur{
-          color: #42baa1;
+      &.cur {
+        color: #42baa1;
       }
     }
   }
