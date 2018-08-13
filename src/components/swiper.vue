@@ -5,7 +5,7 @@
                 <span :class="curIndex==index?'sel':''" v-for="(item, index) in game" :key="index" @click="getGameInfo(index)" :ref="index"><i>{{item}}</i></span>
             </scroll-view>
         </div>
-        <div class="tit letTit" v-text="toView"></div>
+        <!-- <div class="tit letTit" v-text="toView"></div> -->
         <scroll-view class="game_groups"
                      scroll-y="true" 
                      scroll-with-animation="true" 
